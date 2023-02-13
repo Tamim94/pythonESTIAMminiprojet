@@ -1,0 +1,12 @@
+{% extends 'etudiants/base.html'%}
+{% block content %}
+        <h1>{{x}}</h1>
+        <p>La valeur de la variable y est : {{y}}</p>
+
+        <ul>
+            {% for elt in liste %}
+             <li><a href="{% url 'etudiant' elt.id %}"> {{elt.nom}} - {{elt.email}}</a></li>
+            {% endfor %}
+        </ul>
+
+{% endblock %}

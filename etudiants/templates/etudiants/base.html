@@ -1,0 +1,21 @@
+  <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML - Formulaires</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon,stylesheet" href="icon.GIF"/>
+        <link rel="stylesheet" href="/etudiants/index.css">
+    </head>
+
+    <body>
+        <h1>{{x}}</h1>
+        <p>La valeur de la variable y est : {{y}}</p>
+
+        <ul>
+            {% for elt in liste %}
+             <li><a href="{% url 'etudiant' elt.id %}"> {{elt.nom}} - {{elt.email}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
